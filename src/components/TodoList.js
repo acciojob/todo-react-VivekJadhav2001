@@ -31,14 +31,14 @@ function TodoList() {
                         className='p-2.5 bg-blue-600 cursor-pointer rounded-2xl'>Add Todo</button>
                 </div>
 
-                <div className="displayTasks w-full">
+                <ul className="displayTasks w-full">
                     {allTasks.map((task, index) => {
-                        return <div key={index} className="w-full flex justify-center items-center">
+                        return <li key={index} className="w-full flex justify-center items-center">
                             <p className="p-4 text-center">{task}</p>
                             <button className='p-2.5 bg-blue-600 cursor-pointer rounded-2xl' onClick={() => deleteTodo(index)}>Delete</button>
-                        </div>
+                        </li>
                     })}
-                </div>
+                </ul>
             </div>
         </div>
     )
